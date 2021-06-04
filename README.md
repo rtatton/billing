@@ -8,17 +8,18 @@ A simple CLI tool for calculating the total and split costs of a bill.
 
 ```text
 
-> python .\main.py -h
+> python main.py -h
+usage: BillCalculation [-h] [-n N] [-a ADD [ADD ...]] [-d DELIMITER]
 
-usage: BillCalculation [-h] [-n N] [-a ADD [ADD ...]]
-
-Simple tool for calculating the total and split costs of a bill.
+Calculator for the total and split costs of a bill
 
 optional arguments:
   -h, --help            show this help message and exit
   -n N                  Number of parties to split the bill (default: 1)
   -a ADD [ADD ...], --add ADD [ADD ...]
-                        Add costs to the bill as [label] [cost]...
+                        Add costs to the bill as [label] [cost] ...
+  -d DELIMITER, --delimiter DELIMITER
+                        Symbol used to indicate multi-word labels (default: "-")
 ```
 
 ## Calculate
