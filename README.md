@@ -8,7 +8,7 @@ A simple CLI tool for calculating the total and split costs of a bill.
 
 ```text
 
-> python main.py -h
+> python .\main.py -h
 usage: BillCalculation [-h] [-n N] [-a ADD [ADD ...]] [-d DELIMITER]
 
 Calculator for the total and split costs of a bill
