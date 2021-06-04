@@ -12,16 +12,19 @@ class Bill:
 		costs: List of each cost.
 		per: List of cost for each split of the bill.
 	"""
-	__slots__ = ('n', 'labels', 'costs', 'per')
+	__slots__ = ('n', 'labels', 'costs', 'per', 'delimiter')
 
-	def __init__(self, n: int):
+	def __init__(self, n: int, delimiter: str = '-'):
 		self.n = n
 		self.labels = []
 		self.costs = []
 		self.per = []
+		self.delimiter = delimiter
 
 	def add_cost(self, label: str, cost: float):
 		"""Adds a cost to the bill."""
+		if self.delimiter is not None:
+			label = ' '.join(label.split(self.delimiter))
 		self.labels.append(label)
 		self.costs.append(cost := decimal.Decimal(str(cost)))
 		self.per.append(cost / self.n)

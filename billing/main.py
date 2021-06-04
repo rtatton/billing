@@ -20,14 +20,20 @@ def parse():
 		'--add',
 		nargs='+',
 		action='extend',
-		help='Add costs to the bill as [label] [cost]...')
+		help='Add costs to the bill as [label] [cost] ...')
+	parser.add_argument(
+		'-d',
+		'--delimiter',
+		default='-',
+		required=False,
+		help='Symbol used to indicate multi-word labels (default: "-")')
 	return parser.parse_args()
 
 
 def main():
 	"""Takes input from the command line and prints the bill."""
 	args = parse()
-	bill = bills.Bill(args.n)
+	bill = bills.Bill(args.n, delimiter=args.delimiter)
 	for i in range(0, len(args.add) - 1, 2):
 		bill.add_cost(label=args.add[i], cost=float(args.add[i + 1]))
 	bill.summarize()
