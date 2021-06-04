@@ -7,9 +7,7 @@ def parse():
 	"""Returns the command line arguments as an argparse.Namespace object."""
 	parser = argparse.ArgumentParser(
 		'BillCalculation',
-		description=(
-			'Simple tool for calculating the total and split costs of a bill.'
-		))
+		description='Calculator for the total and split costs of a bill')
 	parser.add_argument(
 		'-n',
 		default=1,
