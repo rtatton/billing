@@ -10,6 +10,7 @@ def parse():
 		description='Calculator for the total and split costs of a bill')
 	parser.add_argument(
 		'-n',
+		required=False,
 		default=1,
 		type=int,
 		help='Number of parties to split the bill (default: 1)')
