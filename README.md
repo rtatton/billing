@@ -25,11 +25,10 @@ optional arguments:
 ## Calculate
 
 ```text
-> python .\main.py -n 3 -a apples 12.99 pineapples 14.99 pens 8.99
-
+> python ./main.py -n 3 -a apples 12.99 pens 8.99 apple-pens 13.99
 Apples       12.99    (4.33)
-Pineapples   14.99    (5.00)
 Pens         8.99     (3.00)
+Apple pens   13.99    (4.66)
 -----------------------------
-Total        36.97    (12.32)
+Total        35.97    (11.99)
 ```
