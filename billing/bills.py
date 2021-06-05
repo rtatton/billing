@@ -1,4 +1,5 @@
 import decimal
+from typing import Optional
 
 _SPACE = '   '
 
@@ -11,10 +12,11 @@ class Bill:
 		labels: List of labels for each cost.
 		costs: List of each cost.
 		per: List of cost for each split of the bill.
+		delimiter: A string to split multi-word labels.
 	"""
 	__slots__ = ('n', 'labels', 'costs', 'per', 'delimiter')
 
-	def __init__(self, n: int, delimiter: str = '-'):
+	def __init__(self, n: int, delimiter: Optional[str] = None):
 		self.n = n
 		self.labels = []
 		self.costs = []

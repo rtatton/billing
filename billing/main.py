@@ -18,14 +18,15 @@ def parse():
 		'-a',
 		'--add',
 		nargs='+',
+		required=True,
 		action='extend',
 		help='Add costs to the bill as [label] [cost] ...')
 	parser.add_argument(
 		'-d',
 		'--delimiter',
-		default='-',
+		default=None,
 		required=False,
-		help='Symbol used to indicate multi-word labels (default: "-")')
+		help='Symbol used to indicate multi-word labels (default: None)')
 	return parser.parse_args()
 
 
